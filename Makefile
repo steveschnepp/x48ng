@@ -110,3 +110,7 @@ install: all
 
 	install -m 755 -d -- $(DESTDIR)/etc/X11/app-defaults
 	install -c -m 644 dist/X48NG.ad $(DESTDIR)/etc/X11/app-defaults/X48NG
+
+.PHONY: deps
+deps:
+	sudo apt install pkgconf libx11-dev libxext-dev libreadline-dev libsdl1.2-compat-dev libsdl-gfx1.2-dev
